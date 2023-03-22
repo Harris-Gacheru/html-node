@@ -5,8 +5,8 @@ import router from './routes/routes.js'
 
 const app = express()
 
-app.engine('html', ejs.render)
-app.set('view engine', 'html')
+app.set('views', './views')
+app.set('view engine', 'ejs')
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
