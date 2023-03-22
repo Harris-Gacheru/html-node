@@ -12,31 +12,31 @@
         <div class="mb-4 d-block text-start w-75">
             <a href="/html_node">Go back</a>
         </div>
-
+        
         <div class="card w-75">
             <% if(error) { %>
                 <div class="alert alert-danger m-3" role="alert"><%= error %></div>
             <% } %>
 
             <div class="card-body">
-                <h4 class="mb-2">Add User</h4>
+                <h4 class="mb-2">Edit User</h4>
 
-                <form method="POST" action="/html_node/add_user_data">
+                <form method="POST" action="/html_node/edit/<%= data.id%>">
                     <div class="mb-3">
                       <label class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="first_name" name="first_name">
+                      <input type="text" class="form-control" id="first_name" name="first_name" value="<%= data.first_name%>">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="last_name" name="last_name">
+                      <input type="text" class="form-control" id="last_name" name="last_name" value="<%= data.last_name%>">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Age</label>
-                      <input type="number" class="form-control" id="age" name="age">
+                      <input type="number" class="form-control" id="age" name="age" value="<%= data.age%>">
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Gender</label>
-                      <select class="form-control" id="gender" name="gender">
+                      <select class="form-control" id="gender" name="gender" value="<%= data.gender%>">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                       </select>
